@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Details</title>
+	<style type="text/css">
+		table, tr, td {
+  			border: 1px solid black;
+		}
+	</style>
+</head>
+<body>
+	<h1>TKM Public School</h1>
+	<h2>Students List</h2>
+	<table>
+		<tr>
+			<td> Roll No</td>
+			<td> Name</td>
+			<td> Class</td>
+			<td>Date of Birth</td>
+			<td> Average</td>
+			<td> Hobbies</td>
+		</tr>
+	{% for student in students: %}
+	<tr>
+		<td>{{ student.stud_roll }}</td>
+		<td>{{ student.stud_name }}</td>
+		<td>{{ student.stud_class }}</td>
+		<td>{{ student.stud_dob }}</td>
+		<td>{{ student.stud_average }}</td>
+		<td>{{ student.stud_hobbies }}</td>
+	</tr>
+	{% endfor %}
+</body>
+</html>
